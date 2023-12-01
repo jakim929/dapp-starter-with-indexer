@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently -n contracts,frontend,indexer -c blue,green,yellow \"cd packages/contracts && pnpm run dev\" \"cd packages/frontend && pnpm run dev\" \"cd packages/indexer && pnpm run dev\"",
+    "dev": "concurrently -n contracts,frontend,indexer -c blue,green,yellow \"nx dev @dapp-starter-with-indexer/contracts\" \"nx dev @dapp-starter-with-indexer/frontend\" \"nx dev @dapp-starter-with-indexer/indexer\"",
     "format": "biome format . --write",
     "format:check": "biome format .",
     "lint": "biome check . --apply-unsafe",
