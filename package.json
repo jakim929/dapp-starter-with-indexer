@@ -1,0 +1,20 @@
+{
+  "name": "dapp-starter-with-indexer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n contracts,frontend,indexer -c blue,green,yellow \"cd packages/contracts && pnpm run dev\" \"cd packages/frontend && pnpm run dev\" \"cd packages/indexer && pnpm run dev\"",
+    "format": "biome format . --write",
+    "format:check": "biome format .",
+    "lint": "biome check . --apply-unsafe",
+    "lint:check": "biome check . --verbose"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.2.2",
+    "concurrently": "^8.2.1",
+    "wait-on": "^7.2.0",
+    "nx": "16.10.0",
+    "typescript": "^5.0.2"
+  }
+}
